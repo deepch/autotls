@@ -19,6 +19,6 @@ func RunWithManager(r http.Handler, m *autocert.Manager) error {
 		TLSConfig: &tls.Config{GetCertificate: m.GetCertificate},
 		Handler:   r,
 	}
-
+	s.SetKeepAlivesEnabled(false)
 	return s.ListenAndServeTLS("", "")
 }
