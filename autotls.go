@@ -3,6 +3,7 @@ package autotls
 import (
 	"crypto/tls"
 	"net/http"
+	"log"
 
 	"golang.org/x/crypto/acme/autocert"
 )
